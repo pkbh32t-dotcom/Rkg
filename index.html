@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Girlfriends Day Harshita! ❤️</title>
+    <meta name="description" content="A special romantic celebration page for Harshita on National Girlfriends Day featuring 3D carousel, memory timeline, love notes, and interactive surprises.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-midnight">
+
+    <!-- Interactive Background Canvas -->
+    <canvas id="particleCanvas"></canvas>
+    <div class="petal-container" id="petalContainer"></div>
+
+    <!-- Background Ambient Controls -->
+    <div class="top-controls">
+        <button id="musicToggle" class="control-btn" title="Toggle Romantic Ambiance Music">
+            <span class="btn-icon">🎵</span> <span id="musicText">Play Music</span>
+        </button>
+        <button id="themeToggle" class="control-btn" title="Switch Theme">
+            <span class="btn-icon">✨</span> <span id="themeText">Sunset Mode</span>
+        </button>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header-section">
+        <div class="badge-pill">✨ National Girlfriends Day — August 1st ✨</div>
+        <h1 class="main-title">Happy Girlfriends Day <span class="highlight-name">Harshita</span> <span class="heart-pulse">❤️</span></h1>
+        <p class="subtitle">To the most adorable, caring, and special person in the world — forever & always!</p>
+    </header>
+
+    <!-- Main Content Layout -->
+    <main class="main-container">
+
+        <!-- 3D Photo Carousel Section -->
+        <section class="carousel-section" id="carouselSection">
+            <div class="section-header">
+                <h2>Our Precious Memories 📸</h2>
+                <p>Drag or swipe to rotate the 3D gallery • Click any photo for details</p>
+            </div>
+
+            <div class="scene">
+                <div class="carousel" id="carousel">
+                    <!-- Photo Cell 1 -->
+                    <div class="carousel-cell" data-index="0" data-caption="Harshita's cute playful mood & sweet energy! 🎀">
+                        <div class="polaroid-card">
+                            <div class="img-wrapper">
+                                <img src="harshita_1.jpg" alt="Harshita Selfie Filter" onerror="this.src='1000131617.jpg'">
+                            </div>
+                            <div class="polaroid-caption">Cutest Filter Vibe ✨</div>
+                        </div>
+                    </div>
+                    <!-- Photo Cell 2 -->
+                    <div class="carousel-cell" data-index="1" data-caption="Peace signs & cozy froggy hugs! ✌️🐸">
+                        <div class="polaroid-card">
+                            <div class="img-wrapper">
+                                <img src="harshita_2.jpg" alt="Harshita Peace Sign" onerror="this.src='3c52c68f-46b6-4676-8951-733f0fe494a7-1_all_36075.jpg'">
+                            </div>
+                            <div class="polaroid-caption">Peace & Plushies 💚</div>
+                        </div>
+                    </div>
+                    <!-- Photo Cell 3 -->
+                    <div class="carousel-cell" data-index="2" data-caption="Double portrait mood — gorgeous as always! 💖">
+                        <div class="polaroid-card">
+                            <div class="img-wrapper">
+                                <img src="harshita_3.jpg" alt="Harshita Double Portrait" onerror="this.src='3c52c68f-46b6-4676-8951-733f0fe494a7-1_all_35906.jpg'">
+                            </div>
+                            <div class="polaroid-caption">Twice as Lovely 👑</div>
+                        </div>
+                    </div>
+                    <!-- Photo Cell 4 -->
+                    <div class="carousel-cell" data-index="3" data-caption="Restaurant date with delicious food & the best company! 🍽️">
+                        <div class="polaroid-card">
+                            <div class="img-wrapper">
+                                <img src="harshita_4.jpg" alt="Harshita and Boyfriend Date" onerror="this.src='3c52c68f-46b6-4676-8951-733f0fe494a7-1_all_35782.jpg'">
+                            </div>
+                            <div class="polaroid-caption">Dinner Date Memories 🍕</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <div class="carousel-controls">
+                <button class="nav-btn" id="prevBtn">‹ Prev</button>
+                <button class="nav-btn action-btn" id="autoPlayBtn">⏸ Pause Spin</button>
+                <button class="nav-btn" id="nextBtn">Next ›</button>
+            </div>
+        </section>
+
+        <!-- Interactive Love Letter Section -->
+        <section class="letter-section">
+            <div class="envelope-wrapper" id="envelopeWrapper">
+                <div class="envelope" id="envelope">
+                    <div class="front flap"></div>
+                    <div class="front pocket"></div>
+                    <div class="letter" id="letter">
+                        <div class="letter-content">
+                            <h3 class="letter-title">Dearest Harshita,</h3>
+                            <p>Happy Girlfriends Day! From your cutest expressions to our funniest cafe dates and late-night talks, every single second spent with you is my absolute favorite.</p>
+                            <p>You bring so much light, laughter, and warmth into my world. Thank you for being my partner in crime, my best friend, and my whole heart.</p>
+                            <p class="signature">Forever & Always yours ❤️</p>
+                        </div>
+                    </div>
+                    <div class="wax-seal" id="waxSeal">
+                        <span>H ❤️</span>
+                    </div>
+                </div>
+            </div>
+            <p class="envelope-hint" id="envelopeHint">Click the seal to open your special love letter 💌</p>
+        </section>
+
+        <!-- Reasons Why I Love You Interactive Deck -->
+        <section class="reasons-section">
+            <div class="section-header">
+                <h2>Reasons Why You Are So Special 💖</h2>
+                <p>Click the card below to reveal another reason!</p>
+            </div>
+            <div class="reason-card-container">
+                <div class="reason-card" id="reasonCard">
+                    <div class="reason-icon" id="reasonIcon">✨</div>
+                    <div class="reason-text" id="reasonText">Your beautiful smile brightens up even the darkest days.</div>
+                    <div class="reason-counter" id="reasonCounter">Card 1 of 8</div>
+                    <div class="tap-hint">Tap for next reason ➔</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Love Milestones Timeline -->
+        <section class="timeline-section">
+            <div class="section-header">
+                <h2>Our Journey Together 🗺️</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Chapter 1</span>
+                        <h3>The First Spark 💫</h3>
+                        <p>The unforgettable moment we connected and realized how special this was going to be.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Chapter 2</span>
+                        <h3>Delicious Cafe Dates 🍕</h3>
+                        <p>Sharing bites, funny poses, peace signs, and endless laughs over good food.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Chapter 3</span>
+                        <h3>Endless Selfies & Jokes 📸</h3>
+                        <p>Cute mustache filters, plushie snuggles, and goofy memories that make us smile.</p>
+                    </div>
+                </div>
+                <div class="timeline-item highlight">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Today</span>
+                        <h3>Happy Girlfriends Day 2026 ❤️</h3>
+                        <p>Celebrating Harshita — the amazing girl who owns my heart!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Celebration Trigger & Upload Manager -->
+        <section class="action-bar-section">
+            <button class="celebrate-btn" id="celebrateBtn">
+                <span class="sparkle-icon">🎉</span> UNLEASH LOVE EXPLOSION! <span class="sparkle-icon">💖</span>
+            </button>
+
+            <!-- Custom Photo Uploader Accordion -->
+            <div class="uploader-box">
+                <button class="uploader-toggle" id="uploaderToggle">📷 Customize Photos / Upload Your Own</button>
+                <div class="uploader-content hidden" id="uploaderContent">
+                    <p>Select your favorite photos to replace the carousel images:</p>
+                    <div class="upload-grid">
+                        <label class="upload-slot">
+                            <span>Photo 1</span>
+                            <input type="file" class="photo-input" data-slot="0" accept="image/*">
+                        </label>
+                        <label class="upload-slot">
+                            <span>Photo 2</span>
+                            <input type="file" class="photo-input" data-slot="1" accept="image/*">
+                        </label>
+                        <label class="upload-slot">
+                            <span>Photo 3</span>
+                            <input type="file" class="photo-input" data-slot="2" accept="image/*">
+                        </label>
+                        <label class="upload-slot">
+                            <span>Photo 4</span>
+                            <input type="file" class="photo-input" data-slot="3" accept="image/*">
+                        </label>
+                    </div>
+                    <button id="resetPhotosBtn" class="reset-btn">Reset to Default Photos</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <p>Crafted with endless love for Harshita ❤️ Happy Girlfriends Day!</p>
+    </footer>
+
+    <!-- Photo Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
+            <div class="lightbox-img-box">
+                <img id="lightboxImg" src="" alt="Enlarged Memory">
+            </div>
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
